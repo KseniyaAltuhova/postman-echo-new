@@ -11,13 +11,13 @@ class PostmanEchoTest {
     void shouldTestPostValue() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("Hello! Can i help you?")
+                .body("Hello!")
                 .log().all()
         .when()
                 .post("/post")
         .then()
                 .statusCode(200)
-                .body("data", equalTo("Hello! Can i help you?"))
+                .body("data", equalTo("Hello!"))
                 .contentType(ContentType.JSON)
                 .log().all()
         ;
@@ -35,7 +35,7 @@ class PostmanEchoTest {
                 .post("/post")
         .then()
                 .statusCode(200)
-                .body("data", equalTo("Hello! Can i help you?"))
+                .body("data", equalTo("Здравствуйте! Чем я могу Вам помочь?"))
                 .contentType(ContentType.JSON)
                 .log().all()
         ;

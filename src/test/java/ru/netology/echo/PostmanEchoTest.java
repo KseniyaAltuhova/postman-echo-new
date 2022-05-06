@@ -35,7 +35,7 @@ class PostmanEchoTest {
                 .post("/post")
         .then()
                 .statusCode(200)
-                .body("data", equalTo("Здравствуйте! Чем я могу Вам помочь?"))
+                .body("data", equalTo("Hello! Can i help you?"))
                 .contentType(ContentType.JSON)
                 .log().all()
         ;
